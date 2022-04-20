@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/a77c6ebfcb.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+    <!-- ================================= HEADER ================================= -->
+    <header>
+        <div class="container-nav">
+            <a class="buy" target="blank" href="https://cafecito.app/alecarballeyra">
+                <i class="fa-solid fa-mug-saucer"></i> Buy us a coffee</a>
+            <nav class="nav">
+                <ul>
+                    <li><a href="#" class="about">About us</a></li>
+                    <li><a href="#">Others templates</a></li>
+                    <li><a href="#" class="contact">Contact</a></li>
+                </ul>
+            </nav>
+            <i class="fa-solid fa-circle-user user"></i>
+            
+        </div>
+    </header>
+
+
+    <!-- ================================= HERO ================================= -->
+    <section id="hero">
+    </section>
+
+
+    <!-- ================================= BUY ================================= -->
+    <section id="content">
+        <div class="izquierda">
+            <h3>BAYA NEGRA</h3>
+            <hr>
+            <p><span>■</span>COFFE & BRUNCH<span>■</span></p>
+            <div class="btn-izq">
+                <h3 class="btn2">REQUEST A DEMO</h3>
+                <h3 class="btn1">BUY THE APP</h3>
+            </div>   
+        </div>
+    </section>
+
+
+    <!-- ================================= VIDEO ================================= --> 
+    <section id="video">
+        <div class="container-video">
+            <video class="video" autoplay loop muted>
+                <source src="assets/video/bayaNegra.mp4" type="video/mp4">
+            </video>
+            <img src="assets/img/Iphone-frame.png" class="frame">
+        </div>
+    </section>
+
+
+    <!-- ================================= CONTACT ================================= -->
+
+    <!-- ================================= MODAL 1 ================================= -->
+
+    <section class="modal">
+        <div class="modal_container">
+            <a href="#" class="closeModal">x</a>
+            <h2>About us</h2>
+            <div class="persona">
+                <img src="assets/img/img-fela.png" alt="" class="photo">
+                <div class="info">
+                    <h3 class="name">Felipe Bianchini</h3>
+                    <h4 class="title">Fullstack Developer & Systems Analyst</h4>
+                    <div class="icons">
+                        <a href="https://www.linkedin.com/in/felipebianchini/" target="_blank"><i class="fab fa-linkedin iSocial"></i></a>
+                        <a href="https://github.com/felipebianchini247/" target="_blank"><i class="fa-brands fa-github"></i></a>
+                        <a href="http://felipebianchini.azurewebsites.net/" target="_blank"><i class="fa-solid fa-globe"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="persona">
+                <img src="assets/img/img-ale.png" alt="" class="photo">
+                <div class="info">
+                    <h3 class="name">Alejandro Carballeyra</h3>
+                    <h4 class="title">Frontend Developer - UX / UI & Industrial Designer</h4>
+                    <div class="icons">
+                        <a href="https://www.linkedin.com/in/alejandro-carballeyra/" target="_blank"><i class="fab fa-linkedin iSocial"></i></a>
+                        <a href="https://github.com/Alecarballeyra/" target="_blank"><i class="fa-brands fa-github"></i></a>
+                        <a href="https://alecarballeyra.azurewebsites.net/" target="_blank"><i class="fa-solid fa-globe"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- ================================= MODAL 2 ================================= -->
+
+    <section class="modal2">
+        <div class="modal_container2">
+            <a href="#" class="closeModal2">x</a>
+            <h2>Contact us</h2>
+            
+            <form action="https://formspree.io/f/xgedzgro" method="POST" class="contact__form grid" id="form__contact">
+                <div class="contact__inputs grid">
+                    <div class="contact__content">
+                        <label for="" class="contact__label" data-section="contact" data-value="name">Nombre</label>
+                        <input type="text" name="name" class="contact__input">
+                    </div>
+
+                    <div class="contact__content">
+                        <label for="" class="contact__label">Email</label>
+                        <input type="email" name="email" class="contact__input">
+                    </div>
+                    
+                </div>
+                <div class="contact__content">
+                    <label for="" class="contact__label" data-section="contact" data-value="message">Mensaje</label>
+                    <!-- <input type="email" class="contact__input"> -->
+                    <textarea name="message" id="" cols="0" rows="7" class="contact__input"></textarea>
+                </div>
+
+                <div>
+                    <!-- <input target="blank" type="submit" class="button__b button--flex" value="Send Message"> -->
+                    <span target="blank" onclick="sendContact()" class="button__b button--flex" data-section="contact" data-value="send">
+                        Enviar mensaje
+                    </span>
+                </div>
+            </form>
+           
+        </div>
+    </section>
+
+
+    
+</body>
+
+<script src="assets/js/main.js"></script>
+
+</html>

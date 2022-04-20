@@ -1,0 +1,822 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Futura';
+    src: local('assets/fonts/');
+}
+
+@font-face {
+    font-family: 'Futura';
+    src: url('assets/fonts/Futura1.ttf'), url('assets/fonts/Futura2.ttf') format('truetype'), url('fonts/Futura1.svg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+h1{
+    font-size: 3rem;
+}
+
+h2{
+    font-size: 2.5rem;
+}
+
+h3{
+    font-size: 2rem;
+}
+
+p{
+    font-size: .75rem;
+}
+
+ul{
+    list-style: none;
+}
+
+li{
+    font-size: 1.25rem;
+}
+
+
+/* ================= HEADER ================= */
+
+header{
+    background-color: #f2e2d4;
+    position: fixed;
+    width: 100%;
+}
+
+.container-nav{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 4rem;
+    align-items: center;
+    max-width: 1400px;
+    margin: auto;
+    position: relative;
+
+}
+
+.nav ul li{
+    display: inline-block;
+    margin: 0 30px;
+    /* text-decoration: none; */
+}
+
+.container-nav a{
+    text-decoration: none;
+    color: rgb(22, 20, 15, 0.5);
+    font-size: 1.25rem;
+    font-weight: 600;
+    transition: all 0.4s;
+    font-size: 1rem;
+}
+
+.container-nav a:hover{
+    color: black;
+}
+
+.user{
+    width: 70px;
+    font-size: 30px;
+    cursor: pointer;
+    color: rgb(22, 20, 15, 0.5);
+}
+
+.user:hover{
+    transform: scale(1.05);
+}
+
+
+
+/* ================= HERO ================= */
+#hero{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    background-image: linear-gradient(
+        0deg,
+        rgba(0,0,0,0),
+        rgba(0,0,0,0)
+    ),
+    url(assets/img/fonopng.png);
+    background-size: cover;
+    background-position: center center;
+    background-color: #f2e2d4;
+    
+}
+
+
+/* ================= DIV IZQ ================= */
+
+.izquierda{
+    position: absolute;
+    top: 13rem;
+    left: 7rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: all 1s;
+}
+
+.izquierda h1{
+    margin: 10px 0;
+}
+
+.izquierda p{
+    margin: 10px 0px;
+}
+
+.izquierda span{
+    padding: 0 20px;
+}
+
+hr{
+    width: 100% ;
+    /* text-decoration: none; */
+}
+
+
+/* ================= BTN IZQ ================= */
+
+
+.btn-izq h3{
+    font-size: .75rem;
+}
+
+.btn-izq{
+    padding-top: 2rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.btn1{
+    background-color: white;
+    border-radius: 0.5rem;
+    padding: 0.5rem 1.5rem;
+    transition: all .5s;
+    cursor: pointer;
+    opacity: 90%;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
+    margin: 0 .7rem;
+}
+
+.btn2{
+    border:1px solid white;
+    border-radius: 0.5rem;
+    padding: 0.5rem 1.5rem;
+    transition: all .5s;
+    cursor: pointer;
+    opacity: 90%;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
+    margin: 0 .7rem;
+}
+
+.btn2:hover{
+    /* background-color: white; */
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
+    opacity: 100%;
+}
+
+.btn1:hover{
+   box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
+   opacity: 100%;
+}
+
+
+
+
+/* ================= VIDEO Y MARCO ================= */
+
+.video, .frame{
+    position: absolute;
+    bottom: 6%;
+    right: 35%;
+    width: 250px;
+    height: 520px;
+}
+
+.video{
+    border-radius: 20%;
+}
+
+
+
+
+/* ================= MODALS ================= */
+
+.modal{
+    position: fixed;
+    top: 0;
+    left: -100%;
+    bottom: 0;
+    right: 0;
+    /* background-color: #111111bd; */
+    display: flex;
+    /* opacity: 0; */
+    pointer-events: none;
+    transition: all 1s ease-out;
+
+}
+
+.modal_container{
+    position: relative;
+    width: 620px;
+    max-width: 620px ;
+    background-color: #f2e2d4;
+    margin: auto 0;
+    text-align: center;
+    padding: 1rem 1rem;
+    padding-bottom: 0;
+    border-radius: 16px;
+    box-shadow: 0 -15px 15px rgba(255, 255, 255, 0.2), inset 0 -15px 15px rgba(255, 255, 255, 0.2), 0 -15px 15px rgba(255, 255, 255, 0.2), inset 0 -15px 15px rgba(255, 255, 255, 0.2) ;
+
+}
+
+.modal2{
+    position: fixed;
+    top: 0;
+    left: -100%;
+    bottom: 0;
+    right: 0;
+    /* background-color: #111111bd; */
+    display: flex;
+    /* opacity: 0; */
+    pointer-events: none;
+    transition: all 1s ease-out;
+
+}
+
+.modal_container2{
+    position: relative;
+    /* height: 400px; */
+    width: 620px;
+    max-width: 620px ;
+    background-color: #f2e2d4;
+    margin: auto 0;
+    text-align: left;
+    padding: 1rem 1rem;
+    padding-bottom: 0;
+    border-radius: 16px;
+    box-shadow: 0 -15px 15px rgba(255, 255, 255, 0.2), inset 0 -15px 15px rgba(255, 255, 255, 0.2), 0 -15px 15px rgba(255, 255, 255, 0.2), inset 0 -15px 15px rgba(255, 255, 255, 0.2) ;
+
+}
+
+.closeModal{
+    text-decoration: none;
+    color: rgb(50, 50, 50);
+    position: absolute;
+    right: 10%;
+    top: 6%;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.closeModal2{
+    text-decoration: none;
+    color: rgb(50, 50, 50);
+    position: absolute;
+    right: 10%;
+    top: 6%;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.modal--show{
+    transform: translateX(51%);
+    pointer-events: unset;
+}
+
+.modal h2{
+    font-size: 2rem;
+    padding-top: .3rem;
+    padding-bottom: 1rem;
+}
+
+.modal h3{
+    font-size: 1.7rem;
+}
+
+.modal2 h2{
+    font-size: 2rem;
+    padding-top: .3rem;
+    padding-bottom: 1rem;
+    padding-left: 2.4rem;
+}
+
+.modal2 h3{
+    font-size: 1.7rem;
+}
+
+
+.opac-out{
+    opacity: 0;
+}
+
+.persona{
+    display: flex;
+    margin-bottom: 5%;
+}
+
+.info{
+    margin: auto 0;
+    text-align: left;
+    height: 80%;
+   }
+
+
+.info h4{
+    padding-bottom:1.2rem ;
+    font-size: 95%;
+}
+
+.icons i{
+    font-size: 2rem;
+    margin-right: 2rem;
+    color: rgb(50, 50, 50);
+    cursor: pointer;
+}
+
+.persona img{
+    height: 150px;
+    margin-right: 2rem;
+}
+
+
+.contact__form{
+    padding: 0 2rem;
+}
+.contact__inputs{
+    grid-template-columns: repeat(2, 1fr);
+}
+.grid{
+    display: grid;
+    gap: 1.5rem;
+}
+.contact__content{
+    background-color: #f2e2d4;
+    border: 2px solid rgba(0, 0, 0, 0.05);
+    border-radius: .2rem;
+    padding: .75rem 1rem .25rem;
+}
+.contact__label{
+    font-size: black;
+    color: black;
+}
+.contact__input{
+    width: 100%;
+    background-color: #f2e2d4;
+    color: black;
+    font-family: black;
+    font-size: black;
+    border: none;
+    outline: none;
+    padding: .25rem .5rem .5rem 0;
+    grid-template-columns: repeat(2, 1fr);
+}
+.button__b{
+    background-color: white;
+    border-radius: 0.2rem;
+    padding: 0.5rem 1.5rem;
+    margin-bottom: 2rem;
+    transition: all 1s;
+    cursor: pointer;
+    opacity: 90%;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
+    font-size: 16px;
+    /* display: inline-block;
+    background-color: green;
+    color: #FFF;
+    padding: .7rem 3rem;
+    border-radius: .2rem;
+    cursor: pointer;
+    border: none;
+    transition: all 1s; */
+    
+
+}
+
+
+.button--flex{
+    display: inline-flex;
+    align-items: center;
+}
+.button__b:hover{
+    background-color: white
+}
+
+.modal2 h1 {
+    padding-bottom: 3rem;
+    text-align: center;
+}
+
+.navbar i{
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.buy{
+    display: flex;
+    align-items: center!important;
+    gap: 1rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 1024px){
+
+    
+
+    
+    /* ================= DIV IZQ ================= */
+
+    .izquierda{
+        position: absolute;
+        top: 5rem;
+        left: 0;
+        right: 0;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    /* .izquierda h1{
+        margin: 10px 0;
+    } */
+
+    .izquierda p{
+        margin: 10px 0px;
+    }
+
+    .izquierda span{
+        padding: 0 20px;
+    }
+
+    hr{
+        width: 50% ;
+
+        /* text-decoration: none; */
+    }
+
+
+    /* ================= BTN IZQ ================= */
+
+
+    .btn-izq h3{
+        font-size: .75rem;
+    }
+
+    .btn-izq{
+        padding-top: 2rem;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .btn1{
+        background-color: white;
+        border-radius: 0.5rem;
+        padding: 0.5rem 1.5rem;
+        transition: all .5s;
+        cursor: pointer;
+        opacity: 90%;
+        box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
+        margin: 0 .7rem;
+    }
+
+    .btn2{
+        border:1px solid white;
+        border-radius: 0.5rem;
+        padding: 0.5rem 1.5rem;
+        transition: all .5s;
+        cursor: pointer;
+        opacity: 90%;
+        box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
+        margin: 0 .7rem;
+    }
+
+    .btn2:hover{
+        /* background-color: white; */
+        box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
+        opacity: 100%;
+    }
+
+    .btn1:hover{
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
+    opacity: 100%;
+    }
+
+
+    /* ================= VIDEO Y MARCO ================= */
+
+    .video, .frame{
+        position: absolute;
+        bottom: 8%;
+        right: 25%;
+        width: 207px;
+        height: 430px;
+    }
+
+    .video{
+        border-radius: 20%;
+    }
+
+
+
+
+
+
+
+
+    /* ================= MODALS ================= */
+
+    .modal{
+        position: fixed;
+        top: 0;
+        left: -100%;
+        bottom: 0;
+        right: 0;
+        /* background-color: #111111bd; */
+        display: none;
+        /* opacity: 0; */
+        pointer-events: none;
+        transition: all 1s ease-out;
+
+    }
+
+    .modal_container{
+        position: relative;
+        width: 620px;
+        max-width: 620px ;
+        background-color: #f2e2d4;
+        margin: auto 0;
+        text-align: center;
+        padding: 1rem 1rem;
+        padding-bottom: 0;
+        border-radius: 16px;
+        box-shadow: 0 -15px 15px rgba(255, 255, 255, 0.2), inset 0 -15px 15px rgba(255, 255, 255, 0.2), 0 -15px 15px rgba(255, 255, 255, 0.2), inset 0 -15px 15px rgba(255, 255, 255, 0.2) ;
+
+    }
+
+    .modal2{
+        position: fixed;
+        top: 0;
+        left: -100%;
+        bottom: 0;
+        right: 0;
+        /* background-color: #111111bd; */
+        display: none;
+        /* opacity: 0; */
+        pointer-events: none;
+        transition: all 1s ease-out;
+
+    }
+
+    .modal_container2{
+        position: relative;
+        /* height: 400px; */
+        width: 620px;
+        max-width: 620px ;
+        background-color: #f2e2d4;
+        margin: auto 0;
+        text-align: left;
+        padding: 1rem 1rem;
+        padding-bottom: 0;
+        border-radius: 16px;
+        box-shadow: 0 -15px 15px rgba(255, 255, 255, 0.2), inset 0 -15px 15px rgba(255, 255, 255, 0.2), 0 -15px 15px rgba(255, 255, 255, 0.2), inset 0 -15px 15px rgba(255, 255, 255, 0.2) ;
+
+    }
+
+    .closeModal{
+        text-decoration: none;
+        color: rgb(50, 50, 50);
+        position: absolute;
+        right: 10%;
+        top: 6%;
+        font-size: 1.5rem;
+        font-weight: 700;
+    }
+
+    .closeModal2{
+        text-decoration: none;
+        color: rgb(50, 50, 50);
+        position: absolute;
+        right: 10%;
+        top: 6%;
+        font-size: 1.5rem;
+        font-weight: 700;
+    }
+
+    .modal--show{
+        transform: translateX(51%);
+        pointer-events: unset;
+    }
+
+    .modal h2{
+        font-size: 2rem;
+        padding-top: .3rem;
+        padding-bottom: 1rem;
+    }
+
+    .modal h3{
+        font-size: 1.7rem;
+    }
+
+    .modal2 h2{
+        font-size: 2rem;
+        padding-top: .3rem;
+        padding-bottom: 1rem;
+        padding-left: 2.4rem;
+    }
+
+    .modal2 h3{
+        font-size: 1.7rem;
+    }
+
+
+    .opac-out{
+        opacity: 0;
+    }
+
+    .persona{
+        display: flex;
+        margin-bottom: 5%;
+    }
+
+    .info{
+        margin: auto 0;
+        text-align: left;
+        height: 80%;
+    }
+
+
+    .info h4{
+        padding-bottom:1.2rem ;
+        font-size: 95%;
+    }
+
+    .icons i{
+        font-size: 2rem;
+        margin-right: 2rem;
+        color: rgb(50, 50, 50);
+        cursor: pointer;
+    }
+
+    .persona img{
+        height: 150px;
+        margin-right: 2rem;
+    }
+
+
+    .contact__form{
+        padding: 0 2rem;
+    }
+    .contact__inputs{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .grid{
+        display: grid;
+        gap: 1.5rem;
+    }
+    .contact__content{
+        background-color: #f2e2d4;
+        border: 2px solid rgba(0, 0, 0, 0.05);
+        border-radius: .2rem;
+        padding: .75rem 1rem .25rem;
+    }
+    .contact__label{
+        font-size: black;
+        color: black;
+    }
+    .contact__input{
+        width: 100%;
+        background-color: #f2e2d4;
+        color: black;
+        font-family: black;
+        font-size: black;
+        border: none;
+        outline: none;
+        padding: .25rem .5rem .5rem 0;
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .button__b{
+        background-color: white;
+        border-radius: 0.2rem;
+        padding: 0.5rem 1.5rem;
+        margin-bottom: 2rem;
+        transition: all 1s;
+        cursor: pointer;
+        opacity: 90%;
+        box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
+        font-size: 16px;
+        /* display: inline-block;
+        background-color: green;
+        color: #FFF;
+        padding: .7rem 3rem;
+        border-radius: .2rem;
+        cursor: pointer;
+        border: none;
+        transition: all 1s; */
+        
+
+    }
+
+
+    .button--flex{
+        display: inline-flex;
+        align-items: center;
+    }
+    .button__b:hover{
+        background-color: white
+    }
+
+    .modal2 h1 {
+        padding-bottom: 3rem;
+        text-align: center;
+    }
+
+    .navbar i{
+        font-size: 24px;
+        cursor: pointer;
+    }
+
+    .buy{
+        display: flex;
+        align-items: center!important;
+        gap: 1rem;
+    }
+
+
+}
+
+@media (max-width: 1024px){
+
+}
