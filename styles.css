@@ -82,7 +82,7 @@ header{
 }
 
 .user{
-    width: 70px;
+    width: 50px;
     font-size: 30px;
     cursor: pointer;
     color: rgb(22, 20, 15, 0.5);
@@ -152,6 +152,11 @@ hr{
 
 .btn-izq h3{
     font-size: .75rem;
+}
+
+.btn-izq a{
+    text-decoration: none;
+    color: black;
 }
 
 .btn-izq{
@@ -430,6 +435,7 @@ hr{
     display: flex;
     align-items: center!important;
     gap: 1rem;
+    padding-left: 1rem;
 }
 
 
@@ -482,7 +488,13 @@ hr{
 
 
 
-
+@media (max-width: 650px){
+    .nav ul li{
+        display: none;
+        margin: 0 30px;
+        /* text-decoration: none; */
+    }
+}
 
 
 
@@ -491,7 +503,6 @@ hr{
 
 @media (max-width: 1024px){
 
-    
 
     
     /* ================= DIV IZQ ================= */
